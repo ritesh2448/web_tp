@@ -1,0 +1,7 @@
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Access-Control-Allow-Origin", "http://your-frontend-domain"); // Replace with your frontend domain
+        headers.add("Access-Control-Allow-Methods", "POST");
+        headers.add("Access-Control-Allow-Headers", "Content-Type");
+        headers.add("Access-Control-Max-Age", "3600"); // Optional: Cache preflight response for 1 hour
+        
+        return new ResponseEntity<>("Items created successfully", headers, HttpStatus.CREATED);
